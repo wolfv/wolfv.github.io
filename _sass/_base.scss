@@ -1,5 +1,6 @@
 body {
-  background: $brand-color;
+  // background: $brand-color;
+  background-image: linear-gradient(to right top, #f8cc2e, #f3d241, #eed752, #eadc62, #e6e172, #d9e77e, #cdec8b, #c1f099, #a7f5ac, #8df8c3, #74fada, #5ffbf1);
   color: $text-color;
   font-family: $font-family;
   font-size: 1.3125em;

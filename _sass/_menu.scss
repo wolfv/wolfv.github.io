@@ -1,6 +1,7 @@
 .site-navigation {
   margin-top: 2rem;
   padding: 0 1rem;
+  font-family: sans-serif;
   &:hover,
   &:focus-within {
     a {
@@ -19,7 +20,8 @@
 .site-navigation li {
   list-style: none;
   font-size: .875em;
-  font-variant: small-caps;
+  text-transform: uppercase;
+  // font-variant: uppercase;
   margin: 0;
   &.active a {
     text-decoration: underline;
