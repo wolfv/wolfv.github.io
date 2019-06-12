@@ -14,7 +14,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
-
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
@@ -47,6 +46,19 @@
         </p>
       </aside>
     {% endunless %}
+
+
+    <!-- Add a script to make headers click + linkable! -->
+    <script>
+        var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+        for (var i = 0; i < headings.length; i++) {
+            headings[i].innerHTML =
+                '<a href="#' + headings[i].id + '">' +
+                    headings[i].innerText +
+                '</a>';
+        }
+    </script>
 
   </body>
 </html>

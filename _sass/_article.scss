@@ -10,10 +10,11 @@
   padding: 0 15px;
 }
 
-.post-content p
+.post-content *
 {
   max-width: 36rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post > h1 {
@@ -24,15 +25,31 @@
 }
 
 .post p {
-  text-align: justify;
+  // text-align: justify;
   text-indent: 1.5em;
-  text-justify: inter-word;
+  margin-top: 0.5em;
+  // text-justify: inter-word;
 }
+
+.post h2:first-child
+{
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #333;
+  text-align: left;
+}
+
 
 .post p:first-of-type,
 .post h2 + p {
   text-indent: 0;
+  margin-top: 0;
 }
+
+no-indent + p {
+  text-indent: 0 !important;
+}
+
 
 .post a:hover {
   background: $highlight;
@@ -41,7 +58,10 @@
 .post dl,
 .post ul,
 .post ol {
-  margin: 1.5em;
+  // margin: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .post li {
@@ -54,8 +74,9 @@
 }
 
 .post-meta {
-  margin-bottom: 2em;
-  margin-top: 2em;
+  max-width: 36rem;
+  margin: 2em auto;
+
   text-align: right;
 }
 

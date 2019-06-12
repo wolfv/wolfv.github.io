@@ -2,21 +2,36 @@
  * Syntax highlighting styles
  */
 
-.highlighter-rouge {
+.post-content .highlighter-rouge {
   background: #FFF;
   font-family: monospace;
   font-size: .875em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content .wide-source + .highlighter-rouge {
   margin-left: -15px;
 }
 
-div.highlight {
-  margin: 2rem -100px 0 0;
+.post-content .highlighter-rouge * 
+{
+  margin: 0;
+}
+// 
+.post-content .wide-source + div.highlight {
   padding: 5px 10px;
   max-width: 100%;
   overflow: auto;
 }
 
-.highlight {
+.post-content div.highlight {
+  padding: 5px 10px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.post-content .highlighter-rouge div.highlight {
   background: #FAFAFA;
   font-family: 'IBM Plex Mono', monospace;
   font-size: .875em;
@@ -24,7 +39,7 @@ div.highlight {
   // .highlighter-rouge & {
   //   background: #EEE;
   // }
-  .lineno { color: #d3d3d3; user-select: none; }
+  .lineno { color: #d3d3d3; user-select: none; margin-right: 2px;}
   .hll { background-color: #ffffcc }
   .c { color: #999988; font-style: italic } /* Comment */
   .err { color: #a61717; background-color: #e3d2d2 } /* Error */

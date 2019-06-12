@@ -19,10 +19,12 @@
   flex-direction: column-reverse;
   text-decoration: none;
   padding: .25em;
-  transition: opacity .125s ease-in-out;
+  transition: all .125s ease-in-out;
+  // border-bottom: $text-color 0.5px solid;
   &:hover,
   &:focus {
     opacity: 1 !important;
+    transform: scale(1.25);
   }
   @media (min-width: $on-tablet) {
     display: flex;

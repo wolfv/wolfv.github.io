@@ -1,10 +1,11 @@
 body {
-  // background: $brand-color;
-  background-image: linear-gradient(to right top, #f8cc2e, #f3d241, #eed752, #eadc62, #e6e172, #d9e77e, #cdec8b, #c1f099, #a7f5ac, #8df8c3, #74fada, #5ffbf1);
+  background: $brand-color;
+  // background-image: linear-gradient(to right top, #f8cc2e, #f3d241, #eed752, #eadc62, #e6e172, #d9e77e, #cdec8b, #c1f099, #a7f5ac, #8df8c3, #74fada, #5ffbf1);
   color: $text-color;
   font-family: $font-family;
-  font-size: 1.3125em;
+  font-size: 1em;
   line-height: 1.5;
+  min-height: 100%;
 }
 
 h1 {
@@ -43,6 +44,15 @@ h6 {
   font-style: italic;
   margin: 2.25em auto;
   text-align: center;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
 }
 
 em {
