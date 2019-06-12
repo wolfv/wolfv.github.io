@@ -23,6 +23,8 @@ icon: /assets/images/icon-512.png
 twitter_username: wuoulf
 github_username:  wolfv
 
+google_analytics: "UA-5354047-8"
+
 # Build settings
 markdown: kramdown
 
