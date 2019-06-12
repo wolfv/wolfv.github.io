@@ -2,15 +2,18 @@
  * Syntax highlighting styles
  */
 
-code.highlighter-rouge {
+.highlighter-rouge {
   background: #FFF;
   font-family: monospace;
   font-size: .875em;
+  margin-left: -15px;
 }
 
 div.highlight {
-  margin: 2rem auto;
+  margin: 2rem -100px 0 0;
   padding: 5px 10px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 .highlight {
@@ -21,7 +24,7 @@ div.highlight {
   // .highlighter-rouge & {
   //   background: #EEE;
   // }
-  
+  .lineno { color: #d3d3d3; user-select: none; }
   .hll { background-color: #ffffcc }
   .c { color: #999988; font-style: italic } /* Comment */
   .err { color: #a61717; background-color: #e3d2d2 } /* Error */

@@ -7,10 +7,13 @@
 }
 
 .post > * {
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 15px;
+}
+
+.post-content p
+{
   max-width: 36rem;
-  padding: 0 1em;
+  margin: 0 auto;
 }
 
 .post > h1 {
