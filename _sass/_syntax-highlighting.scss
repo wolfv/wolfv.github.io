@@ -10,11 +10,17 @@
   margin-bottom: 0.5rem;
 }
 
-.post-content wide-source + p {
+.post-content wide-source + .highlighter-rouge {
   // margin-left: -15px;
   min-width: 100%;
   width: 100%;
 
+}
+
+.post-content wide-source + p {
+  // margin-left: -15px;
+  min-width: 100%;
+  width: 100%;
 }
 
 .post-content wide-source + p img {
