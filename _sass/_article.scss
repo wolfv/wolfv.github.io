@@ -26,7 +26,7 @@
 
 .post p {
   // text-align: justify;
-  text-indent: 1.5em;
+  // text-indent: 1.5em;
   margin-top: 0.5em;
   // text-justify: inter-word;
 }
@@ -35,10 +35,10 @@
 {
   font-size: 1.2em;
   margin-bottom: 1em;
-  color: #333;
+  color: #555 !important;
   text-align: left;
+  font-family: $h2font, monospace;
 }
-
 
 .post p:first-of-type,
 .post h2 + p {

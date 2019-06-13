@@ -10,8 +10,17 @@
   margin-bottom: 0.5rem;
 }
 
-.post-content .wide-source + .highlighter-rouge {
-  margin-left: -15px;
+.post-content wide-source + p {
+  // margin-left: -15px;
+  min-width: 100%;
+  width: 100%;
+
+}
+
+.post-content wide-source + p img {
+  // margin-left: -15px;
+  min-width: 100%;
+  width: 100%;
 }
 
 .post-content .highlighter-rouge * 
@@ -19,7 +28,7 @@
   margin: 0;
 }
 // 
-.post-content .wide-source + div.highlight {
+.post-content wide-source + div.highlight {
   padding: 5px 10px;
   max-width: 100%;
   overflow: auto;

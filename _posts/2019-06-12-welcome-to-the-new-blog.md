@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to the new blog"
 author: "Wolf Vollprecht"
-categories: literature
+categories: general
 ---
 
 After receiving multiple complaints, and also growing more and more frustrated with Mediums lack of proper syntax highlighting or general embedding qualities, I've decided to give GitHub pages (Jekyll) a spin. I am actually pretty pleased with Jekyll so far -- even though I don't particulary like Ruby, I find Jekyll pretty cool.
