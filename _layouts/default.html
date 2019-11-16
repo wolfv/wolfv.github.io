@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   <head>
     
     <meta charset="utf-8">
@@ -8,19 +8,22 @@
     
     <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
 
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
 
     <link rel="apple-touch-icon" href="{{ site.icon }}">
 
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans&display=swap" rel="stylesheet">
 
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
 
   </head>
-  <body>
+  <body class="home-template sans-serif ma4 ma4-m ma5-ns mw9 lh-title">
 
+<!--  
     {% if page.layout == 'home' %}
       <a href="#main" class="skip-navigation">
         Skip to list of posts
@@ -30,23 +33,20 @@
         Skip to content
       </a>
     {% endif %}
+ -->
 
-    {{ content }}
+    <div class="wrapper">
+        <header class="bb">
+            <div class="flex flex-wrap mb3">
+                <h2 class="w-30-ns mw5-ns f5 mv0 pr3 dn db-ns">Title</h2>
+                <h2 class="w-70-ns normal f5 mv0">{% include breadcrumb.html %}</h2>
+            </div>
+        </header>
 
-    {% unless site.hide_search %}
-      {% include search.html %}
-    {% endunless %}
 
-    {% include menu.html %}
+        {{ content }}
 
-    {% unless site.hide_credits %}
-      <aside class="site-credits">
-        <p>
-          <small><a href="https://github.com/patdryburgh/hitchens">Hitchens Theme</a> powered by <a href="http://jekyllrb.com">Jekyll</a></small>
-        </p>
-      </aside>
-    {% endunless %}
-
+    </div>
     <!-- Add a script to make headers click + linkable! -->
     <script>
         var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");

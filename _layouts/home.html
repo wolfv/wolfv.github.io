@@ -2,71 +2,42 @@
 layout: default
 ---
 
-{% if site.data.menu and site.paginate and site.paginate_path and paginator.page > 1 %}
-  {% include menu.html %}
-{% elsif site.paginate and site.paginate_path and paginator.page > 1 %}
-  {% include back-link.html %}
-{% else %}
-  <header class="site-masthead">
-    {% include menu.html %}
-    {% if site.title %}
-      <h1>
-        {{ site.title }}
-      </h1>
-    {% endif %}
-    {% if site.title %}
-      <h2>
-        {{ site.description }}
-      </h2>
-    {% endif %}
-  </header>
-{% endif %}
+    <main class="main">
+        <section class="flex flex-wrap mt6 mb4">
+            <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Name</h2>
+            <h1 class="w-70-ns w-100 normal f5 mt0">Wolf Vollprecht</h1>
+        </section>
+        <section class="flex flex-wrap mt0 mb4">
+            <h2 class="w-30-ns w-100 mw5-ns f5 mt0">About</h2>
+            <div class="w-70-ns w-100 normal f5 mt0">
+            <p class="mt0">
+              This is my personal blog. I write about technology, open science 
+              and open data. I am involved in a number of open source projects,
+              the biggest are <a href="http://github.com/xtensor-stack">xtensor</a>
+              and <a href="http://github.com/xtensor-stack/xsimd">xsimd</a>. I also 
+              work a lot on technologies in the Project Jupyter space. I did my master
+              studies in Robotics, Systems and Controls and still use ROS on a daily basis.
+            </p>
+            <p>
+              I am currently employed at a small & very fine software consultancy in Paris, called 
+              <a href="https://quantstack.net">QuantStack</a> where we are lucky 
+              to work on mostly open source software.
+            </p>
+          </div>
+        </section>
+        <section class="flex flex-wrap mt0 mb4">
+            <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Contact</h2>
+            <div class="w-70-ns w-100 normal f5 mt0">
+              <a href="emailto:w.vollprecht@gmail.com">w.vollprecht@gmail.com</a>
+            </div>
+        </section>
 
-<main class="home" id="main" role="main" aria-label="Content">
-
-  <h1 class="content-title divided">
-    {% if site.paginate and site.paginate_path and paginator.page > 1 %}
-      Page {{ paginator.page }}
-    {% else %}
-      Contents
-    {% endif %}
-  </h1>
-
-  {% if site.paginate and site.paginate_path %}
-    
-    <ul class="post-list">
-      {% for post in paginator.posts %}
-        {% include post-list-item.html %}
-      {% endfor %}
-    </ul>
-
-    {% if paginator.total_pages > 1 %}
-
-      <div class="post-pagination">
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="pagination-next btn">&lang;&nbsp;Older</a>
-        {% else %}
-          <span>&nbsp;</span>
-        {% endif %}
-        <span class="pagination-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous btn">Newer&nbsp;&rang;</a>
-        {% else %}
-          <span>&nbsp;</span>
-        {% endif %}
-      </div>
-
-    {% endif %}
-
-  {% else %}
-
-    <ul class="post-list">
-      {% for post in site.posts %}
-        {% include post-list-item.html %}
-      {% endfor %}
-    </ul>
-  
-  {% endif %}
-    
-
-</main>
+        <section class="flex flex-wrap mb4">
+            <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Blog</h2>
+            <div class="w-70-ns w-100">
+                {% for post in site.posts %}
+                  {% include post-list-item.html %}
+                {% endfor %}
+              </div>
+          </section>
+    </main>

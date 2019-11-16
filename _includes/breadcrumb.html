@@ -1,0 +1,8 @@
+<div class="breadcrumb">
+  ~ / <a href="{{ '/' | prepend: site.baseurl }}">Home</a> /
+  {% for cat in page.categories %}
+    <a href="{{ site.data.breadcrumbs[cat].url | prepend: site.baseurl }}">{{ site.data.breadcrumbs[cat].title }}</a> /
+  {% endfor %}
+  <!-- <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> -->
+  {{ page.title }}
+</div>

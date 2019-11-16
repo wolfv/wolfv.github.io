@@ -1,5 +1,18 @@
 ---
 layout: post
 ---
-
-{{ content }}
+        
+<header class="bb">
+    <div class="flex flex-wrap mb3">
+        <h2 class="w-30-ns pr3 mw5-ns f5 mv0 dn db-ns">Title</h2>
+        <h1 class="w-70-ns w-100 normal f5 mv0">
+            {% include breadcrumb.html %}
+        </h1>
+    </div>
+</header>    
+<section class="flex flex-wrap mt6 mb4">
+    <h2 class="w-30-ns w-100 mw4-5-ns f5 mt0">Note</h2>
+    <article class="w-70-ns w-100 mt0 mw6-7 lh-copy">
+        {{ content }}
+    </article>
+</section>

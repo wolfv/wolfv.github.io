@@ -2,13 +2,14 @@
 layout: post
 title: "Conda for C++ packages"
 author: "Wolf Vollprecht"
-categories: literature
+categories: posts
 ---
 
-## There exist a multitude of package management solutions for C++ but none is dominant
-
+<div class="subtitle">
+There exist a multitude of package management solutions for C++ but none is dominant
 In this post we're going to argue why we think conda is the package manager for the
 future! 
+</div>
 
 ### What makes conda strong
 

@@ -1,0 +1,40 @@
+.post-title {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  font-size: 1rem; 
+}
+
+.sans-serif {
+  font-family: 'IBM Plex Sans',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+
+html {
+	font-size: 16px;
+}
+
+article
+{
+	h1 a,
+	h2 a,
+	h3 a,
+	h4 a,
+	h5 a,
+	h6 a {
+		text-decoration: none;
+		color: inherit;
+		font-size: 1rem;
+	}
+}
+
+.skip-navigation {
+	display: none;
+	text-align: center;
+	&:focus {
+		display: block;
+	}
+}
+
+.subtitle {
+	font-style: italic;
+}
+

@@ -1,0 +1,15 @@
+posts:
+  title: Posts
+  url: /posts/
+
+api:
+  title: API
+  url: /api/
+
+faq:
+  title: FAQ
+  url: /faq/
+
+news:
+  title: News
+  url: /news/

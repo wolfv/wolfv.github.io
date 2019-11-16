@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<main class="main">
+    <section class="flex flex-wrap mt6 mb4">
+        <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Posts</h2>
+        <div class="w-70-ns w-100 normal f5 mt0">
+          {% for post in site.posts %}
+            {% include post-list-item.html %}
+          {% endfor %}
+        </div>
+    </section>
+</main>
+
+

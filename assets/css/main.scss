@@ -5,17 +5,21 @@
 
 $asset_url: '{{ '/assets' | absolute_url }}';
 
-@import 
-  "reset",
-  "variables",
-  "syntax-highlighting",
-  "mixins",
-  "font",
-  "base",
-  "masthead",
-  "menu",
-  "post-list",
-  "article",
-  "footnotes",
-  "search"
-;
+@import
+  "tachyon",
+  "tachyon_mod",
+  "syntax-highlighting"
+; 
+// @import 
+  // "reset",
+  // "variables",
+  // "mixins",
+  // "font",
+  // "base",
+  // "masthead",
+  // "menu",
+  // "post-list",
+  // "article",
+  // "footnotes",
+  // "search"
+// ;
