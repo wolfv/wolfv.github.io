@@ -1,15 +1,15 @@
 posts:
   title: Posts
-  url: /posts/
+  url: /posts
 
 api:
   title: API
-  url: /api/
+  url: /api
 
 faq:
   title: FAQ
-  url: /faq/
+  url: /faq
 
 news:
   title: News
-  url: /news/
+  url: /news

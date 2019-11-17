@@ -6,7 +6,7 @@
   {% endif %}
 
   {% for cat in page.categories %}
-    <a href="{{ site.data.breadcrumbs[cat].url | prepend: site.baseurl }}">{{ site.data.breadcrumbs[cat].title }}</a> /
+    <a href="{{ site.data.breadcrumbs[cat].url | prepend: site.baseurl }}.html">{{ site.data.breadcrumbs[cat].title }}</a> /
   {% endfor %}
 
   {% if page.url != '/' %}
