@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Our obligation: open search"
+title: "Our Obligation: Open Search"
 author: "Wolf Vollprecht"
 categories: posts
 ---

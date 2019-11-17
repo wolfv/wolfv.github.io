@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Welcome to the new blog"
+title: "Welcome to the New Blog"
 author: "Wolf Vollprecht"
 categories: posts
 ---

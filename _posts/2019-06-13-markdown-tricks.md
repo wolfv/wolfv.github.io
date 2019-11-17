@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Markdown tips for Jekyll"
+title: "Markdown Tips for Jekyll"
 author: "Wolf Vollprecht"
 categories: posts
 ---
