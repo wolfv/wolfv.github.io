@@ -1,8 +1,15 @@
 <div class="breadcrumb">
+  {% if page.url != '/' %}
   ~ / <a href="{{ '/' | prepend: site.baseurl }}">Home</a> /
+  {% else %}
+  ~ / Home
+  {% endif %}
+
   {% for cat in page.categories %}
     <a href="{{ site.data.breadcrumbs[cat].url | prepend: site.baseurl }}">{{ site.data.breadcrumbs[cat].title }}</a> /
   {% endfor %}
-  <!-- <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> -->
-  {{ page.title }}
+
+  {% if page.url != '/' %}
+	  {{ page.title }}
+  {% endif %}
 </div>

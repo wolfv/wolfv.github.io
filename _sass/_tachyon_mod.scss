@@ -38,3 +38,38 @@ article
 	font-style: italic;
 }
 
+a {
+	text-decoration: none;
+	color: #00449E;
+}
+
+ul {
+	list-style-type: none;
+	li {
+		padding-bottom: 4px;
+		&:last-child {
+			padding-bottom: 0px;
+		}
+		&:before {
+			content: '\2013';
+			margin-left: -20px;
+			margin-right: 10px;
+		}
+	}
+}
+
+ol {
+	li {
+		padding-bottom: 4px;
+		&:last-child {
+			padding-bottom: 0px;
+		}
+	}
+}
+
+
+.footnotes {
+	border-top: 1px solid #CCC;
+	margin-top: 5rem;
+}
+
