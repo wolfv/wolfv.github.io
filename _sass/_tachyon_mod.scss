@@ -67,6 +67,27 @@ ol {
 	}
 }
 
+figure {
+	margin: 0;
+	position: relative;
+	figcaption {
+		@media screen and (min-width: 60em) {
+			position: absolute;
+			left: -16rem;
+			// text-align: right;
+			top: 0;
+			width: 14rem;
+			height: 100%;
+			font-size: 0.8rem;
+			color: #555;
+		}
+		@media screen and (max-width: 60em) {
+			text-align: center;
+			font-size: 0.8rem;
+			color: #555;
+		}
+	}
+}
 
 .footnotes {
 	border-top: 1px solid #CCC;
