@@ -2,6 +2,7 @@
 layout: post
 title: "Welcome to the New Blog"
 author: "Wolf Vollprecht"
+summary: Just a quick hello on the new blog.
 categories: posts
 ---
 

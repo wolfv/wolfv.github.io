@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Markdown Tips for Jekyll"
+summary: A small trick to demonstrate how to achieve expanding or wide source code with Jekyll
 author: "Wolf Vollprecht"
 categories: posts
 ---

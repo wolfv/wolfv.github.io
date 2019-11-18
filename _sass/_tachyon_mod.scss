@@ -87,10 +87,22 @@ figure {
 			color: #555;
 		}
 	}
+	&.small {
+		text-align: center;
+		@media screen and (min-width: 60em) {
+			img {
+				max-width: 50%;
+			}
+		}
+		figcaption {
+			position: relative;
+			left: 0;
+			width: 100%;
+		}
+	}
 }
 
 .footnotes {
 	border-top: 1px solid #CCC;
 	margin-top: 5rem;
 }
-

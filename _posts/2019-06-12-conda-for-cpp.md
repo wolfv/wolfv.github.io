@@ -2,10 +2,11 @@
 layout: post
 title: "Conda for C++ packages"
 author: "Wolf Vollprecht"
+summary: "Conda is often thought as a Python package manager, but it works great for C++, too! Here is how:"
 categories: posts
 ---
 
-<div class="subtitle"> There exist a multitude of package management solutions
+<div class="subtitle">There exist a multitude of package management solutions
 for C++ but none is dominant In this post we're going to argue why we think
 conda is the package manager for the future! </div>
 

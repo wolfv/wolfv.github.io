@@ -2,6 +2,8 @@
 layout: post
 title: "Reverse Engineering the Siri Knowledge Endpoint"
 author: "Wolf Vollprecht"
+summary: I have been curious to figure out where the Siri knowledge queries go, and what is returned.
+image: /assets/images/2019/barack_siri.png
 categories: posts
 ---
 
@@ -9,6 +11,11 @@ I've been curious how *Siri Knowledge* works and what data it receives from Appl
 servers. As a long term goal, I am curious how feasible it is to implement something 
 similar based on open data (and maybe even offline!) in order to weaken our dependency
 on google and co (I have blogged [about this before]({% post_url 2019-10-16-open-data-and-search %}))
+
+<figure class="small">
+  <img src="/assets/images/2019/barack_siri.png" alt="Siri knowledge result for Barack" />
+  <figcaption>Siri Knowledge result for <i>barack</i></figcaption>
+</figure>
 
 On a Mac OS X I have captured a couple of requests to the Apple servers, 
 by using the neat [`mitmproxy`](https://mitmproxy.org/) tool to capture and analyze

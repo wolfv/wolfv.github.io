@@ -2,6 +2,7 @@
 layout: post
 title: "Our Obligation: Open Search"
 author: "Wolf Vollprecht"
+summary: It's fundamentally unfair to create Open Data without working on free tools to derive useful knowledge from this data.
 categories: posts
 ---
 
