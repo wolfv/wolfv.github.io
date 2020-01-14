@@ -66,6 +66,18 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
 
+    <script>
+      (function() {
+        var script = document.createElement('script');
+        window.counter = 'https://wolfv_github_io.goatcounter.com/count'
+        script.async = 1;
+        script.src = '//gc.zgo.at/count.js';
+
+        var ins = document.getElementsByTagName('script')[0];
+        ins.parentNode.insertBefore(script, ins)
+      })();
+    </script>
+
   </head>
   <body class="home-template sans-serif ma4 ma4-m ma5-ns mw9 lh-title">
 
@@ -104,6 +116,5 @@
                 '</a>';
         }
     </script>
-
   </body>
 </html>
