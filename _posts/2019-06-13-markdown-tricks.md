@@ -7,7 +7,7 @@ categories: posts
 ---
 
 <div class="subtitle">
-How to apply custom style with custom HTML tags and CSS for specific elements with MarkDown
+	How to apply custom style with custom HTML tags and CSS for specific elements with MarkDown
 </div>
 
 As mentioned in the previous blog post, I just set up a new Jekyll instance for blogging like a pro (as opposed to blogging with Medium). Medium already really limits the ways of styling content --- something I've always disliked. For this blog I wanted to have two different ways of displaying source code: an expanded view, and a slightly smaller, non-expanded view. However, as far as I know there is no way to add some HTML tags to Jekylls source code renderer. That's why I came up with a small hack.

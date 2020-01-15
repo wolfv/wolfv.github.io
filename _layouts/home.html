@@ -1,70 +1,79 @@
 ---
 layout: default
 ---
-
 <main class="main">
-    <section class="flex flex-wrap mt6 mb4">
-        <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Name</h2>
-        <h1 class="w-70-ns w-100 normal f5 mt0">Wolf Vollprecht</h1>
-    </section>
-    <section class="flex flex-wrap mt0 mb4">
-        <h2 class="w-30-ns w-100 mw5-ns f5 mt0">About</h2>
-        <div class="w-70-ns w-100 normal f5 mt0">
-        <p class="mt0">
-          This is my personal blog. I write about technology, open science 
-          and open data. I am involved in a number of open source projects,
-          the biggest are <a href="http://github.com/xtensor-stack">xtensor</a>
-          and <a href="http://github.com/xtensor-stack/xsimd">xsimd</a>. I also 
-          work a lot on technologies in the Project Jupyter space. I did my master
-          studies in Robotics, Systems and Controls and still use ROS on a daily basis.
-        </p>
-        <p>
-          I am currently employed at a small & very fine software consultancy in Paris, called 
-          <a href="https://quantstack.net">QuantStack</a> where we are lucky 
-          to work on mostly open source software.
-        </p>
-      </div>
-    </section>
-    <section class="flex flex-wrap mt0 mb4">
-        <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Contact</h2>
-        <div class="w-70-ns w-100 normal f5 mt0">
-          <div class="mb3">
-            <img src="assets/images/mail.svg" class="mw2 dib" />
-            <div class="dib ml3">
-              Email: <br />
-              <a href="emailto:w.vollprecht@gmail.com">w.vollprecht@gmail.com</a><br/>
-            </div>
-          </div>
-          <div class="mb3">
-            <img src="assets/images/twitter.svg" class="mw2 dib" />
-            <div class="dib ml3">
-              Twitter: <br />
-              <a href="https://twitter.com/wuoulf">@wuoulf</a><br/>
-            </div>
-          </div>
-          <div class="mb3">
-            <img src="assets/images/github.svg" class="mw2 dib" />
-            <div class="dib ml3">
-              GitHub: <br />
-              <a href="https://github.com/wolfv">@wolfv</a><br/>
-            </div>
-          </div>
-          <div class="">
-            <img src="assets/images/linkedin.svg" class="mw2 dib" />
-            <div class="dib ml3">
-              LinkedIn: <br />
-              <a href="https://www.linkedin.com/in/wolfvollprecht/">wolfvollprecht</a><br/>
-            </div>
-          </div>
+  <section class="flex flex-wrap mt6 mb4">
+    <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Name</h2>
+    <h1 class="w-70-ns w-100 normal f5 mt0">Wolf Vollprecht</h1>
+  </section>
+  <section class="flex flex-wrap mt0 mb4">
+    <h2 class="w-30-ns w-100 mw5-ns f5 mt0">About</h2>
+    <div class="w-70-ns w-100 normal f5 mt0">
+      <p class="mt0">
+        This is my personal blog. I write about technology, open science
+        and open data. I am involved in a number of open source projects,
+        the biggest are <a href="http://github.com/xtensor-stack">xtensor</a>
+        and <a href="http://github.com/xtensor-stack/xsimd">xsimd</a>. I also
+        work a lot on technologies in the Project Jupyter space. I did my master
+        studies in Robotics, Systems and Controls and still use ROS on a daily basis.
+      </p>
+      <p>
+        I am currently employed at a small & very fine software consultancy in Paris, called
+        <a href="https://quantstack.net">QuantStack</a> where we are lucky
+        to work on mostly open source software.
+      </p>
+    </div>
+  </section>
+  <section class="flex flex-wrap mt0 mb4">
+    <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Contact</h2>
+    <div class="w-70-ns w-100 normal f5 mt0">
+      <div class="mb3">
+        <img src="assets/images/mail.svg" class="mw2 dib" />
+        <div class="dib ml3">
+          Email: <br />
+          <a href="emailto:w.vollprecht@gmail.com">w.vollprecht@gmail.com</a><br/>
         </div>
-    </section>
-
-    <section class="flex flex-wrap mb4">
-        <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Blog</h2>
-        <div class="w-70-ns w-100">
-            {% for post in site.posts %}
-              {% include post-list-item.html %}
-            {% endfor %}
-          </div>
-      </section>
+      </div>
+      <div class="mb3">
+        <img src="assets/images/twitter.svg" class="mw2 dib" />
+        <div class="dib ml3">
+          Twitter: <br />
+          <a href="https://twitter.com/wuoulf">@wuoulf</a><br/>
+        </div>
+      </div>
+      <div class="mb3">
+        <img src="assets/images/github.svg" class="mw2 dib" />
+        <div class="dib ml3">
+          GitHub: <br />
+          <a href="https://github.com/wolfv">@wolfv</a><br/>
+        </div>
+      </div>
+      <div class="">
+        <img src="assets/images/linkedin.svg" class="mw2 dib" />
+        <div class="dib ml3">
+          LinkedIn: <br />
+          <a href="https://www.linkedin.com/in/wolfvollprecht/">wolfvollprecht</a><br/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="flex flex-wrap mb4">
+    <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Blog</h2>
+    <div class="w-70-ns w-100">
+      {% for post in site.posts %}
+        {% include post-list-item.html %}
+      {% endfor %}
+    </div>
+  </section>
+  <!--
+  <section class="flex flex-wrap mb4">
+    <h2 class="w-30-ns w-100 mw5-ns f5 mt0">Book</h2>
+    <div class="w-70-ns w-100">
+      {% for b in site.book %}
+        BOOK
+        {{ b.content }}
+      {% endfor %}
+    </div>
+  </section>
+  -->
 </main>
