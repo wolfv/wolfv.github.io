@@ -46,6 +46,7 @@ For this initial experiment with font design I used SolveSpace, but any of the o
 
 <video width="100%" controls autoplay="true">
   <source src="/assets/images/2020/constrained_font.webm" type="video/webm">
+  <source src="/assets/images/2020/constrained_font.mp4" type="video/mp4">
 </video>
 
 As can be seen in the video, all properties of this simple font are connected – the width of each of the stems is always equal and the radius of the curves is equal across the different letters. Obviously this is a very simple example, but more complex scenarios are definitly envisioned.
