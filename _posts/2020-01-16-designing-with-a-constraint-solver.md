@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Designing with a Constraint Solver"
+title: "Designing Fonts and Other Things with a Constraint Solver"
 author: "Wolf Vollprecht"
-summary: CAD programs have a constraint solver for sketches since forever, but they are generally missing from artistic software.
+summary: CAD programs have a constraint solver for sketches since forever, but they are generally missing from graphics software.
+image: /assets/images/2020/font_design_title_image.png
 categories: posts
 ---
 
@@ -11,7 +12,7 @@ categories: posts
 	since around 30 years. However, this has never carried 
 	over into the "artistic" world, even though it has the potential to make 
 	certain repetetive tasks much simpler. Especially for font design and layout
-	tasks a constraint system seems desirable.
+	tasks a constraint system seems like a good idea.
 </p>
 
 <figure>
@@ -41,11 +42,19 @@ solver:
 - [NoteCAD](http://notecad.xyz) is a online CAD software (notecad.xyz) that is
   built from scratch with the game framework Unity in C#
 
-For this initial experiment with font design I am using SolveSpace, but any of the other two projects would have worked just as well.
+For this initial experiment with font design I used SolveSpace, but any of the other two projects would have worked just as well.
+
+<video width="100%" controls autoplay="true">
+  <source src="/assets/images/2020/constrained_font.webm" type="video/webm">
+</video>
+
+As can be seen in the video, all properties of this simple font are connected – the width of each of the stems is always equal and the radius of the curves is equal across the different letters. Obviously this is a very simple example, but more complex scenarios are definitly envisioned.
+
+Inkscape already has an open issue for integrating with a geometric constraint solver here: [GitLab Issue](https://gitlab.com/inkscape/inbox/issues/1465). I seriously think it could be a "killer"-feature for any font editor or Inkscape!
 
 ### A standalone constraint solver
 
-In order to make this functionality available to other software, such as Inkscape, BirdFont or FontForge, I have ported the constraint solver found in NoteCAD to C++. C++ is a good choice because it can be compiled for any target system and offers high performance, and pybind11 makes it easy to create Python bindings in the future. Other options could have been to write it directly in Python and accelerate using JIT compilers such as JAX or numba, or to write it in Rust (I might attempt to por the solver to Rust at some point in the future).
+In order to make this functionality available to other software, such as Inkscape, BirdFont or FontForge, I have started to port the constraint solver found in NoteCAD to C++. C++ is a good choice because it can be compiled for any target system and offers high performance, and pybind11 makes it easy to create Python bindings in the future. Other options could have been to write it directly in Python and accelerate using JIT compilers such as JAX or numba, or to write it in Rust (I might attempt to por the solver to Rust at some point in the future, just for fun).
 
 For now, the project is called `Adjacent`, and the source code can be found on [GitHub](https://github.com/evil-spirit/Adjacent). I am currently working on adding a simple entity system and constraints (right now it's the bare-bones solver). In the near future, I would like to support a syntax similar to this pseudo-Python:
 
@@ -60,3 +69,11 @@ constraints.solve()
 print(p1, p2, p3)
 # prints newly computed points
 ```
+
+Another obvious use case would be to integrate the geometric constraint solver into [scikit-geometry](https://github.com/scikit-geometry/scikit-geometry), to allow for constraining geometric constructions easily.
+
+Lot's of exciting things ahead!
+
+---
+
+If you want to follow news around this subject, you can follow me on **[⇒ Twitter](https://twitter.com/@wuoulf)**
