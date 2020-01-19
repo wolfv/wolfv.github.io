@@ -2,7 +2,8 @@
 layout: post
 title: "2020 ipywidgets workshop in Paris"
 author: "Wolf Vollprecht"
-summary: I have worked on finishing drag'n'drop in ipywidgets, and adding dynamic loading to JuppyterLab extensions. 
+summary: I have worked on finishing drag'n'drop in ipywidgets, and adding dynamic loading to JuppyterLab extensions.
+image: /assets/images/2020/dragdropteaser.png
 categories: posts
 ---
 
