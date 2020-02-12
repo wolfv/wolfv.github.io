@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="">
   <head>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
 
+    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i|IBM+Plex+Sans:400,400i,600,600i&display=swap" rel="stylesheet">
 
@@ -78,7 +76,7 @@
   </head>
   <body class="home-template sans-serif ma4 ma4-m ma5-ns mw9 lh-title">
 
-<!--  
+<!--
     {% if page.layout == 'home' %}
       <a href="#main" class="skip-navigation">
         Skip to list of posts
@@ -97,7 +95,12 @@
                 <h2 class="w-70-ns normal f5 mv0">{% include breadcrumb.html %}</h2>
             </div>
         </header>
-
+        <div class="switch-wrapper">
+          <span class="switcher switcher-1">
+             <input type="checkbox" id="darkmode_button">
+             <label for="switcher-1"></label>
+          </span>
+        </div>
 
         {{ content }}
 
@@ -118,6 +121,97 @@
     <script>
       // new Darkmode().showWidget();
       mediumZoom('.post-content img')
+    </script>
+
+    <script type="text/javascript">
+
+      if (history.scrollRestoration) {
+        window.history.scrollRestoration = 'auto';
+      }
+
+      let scrollMapper = {}
+
+      let onClickHandler = function(x) {
+          scrollMapper[location.href] = getScroll();
+          gotoURL(x.target.href, true, [0, 0]);
+          x.preventDefault();
+          return false;
+        };
+
+      let attachClickHandler = function(dom) {
+        for (el of dom.querySelectorAll('a')) {
+          if (el.hostname === window.location.hostname)
+          {
+            el.onclick = onClickHandler;
+          }
+        }
+
+        if (document.cookie.replace(/(?:(?:^|.*;\s*)darkmode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "true") {
+          console.log("restoring dark mode")
+          dom.classList.add('dark');
+          dom.querySelector("#darkmode_button").checked = true;
+        }
+        else {
+          console.log("setting chckbox to false");
+          dom.querySelector("#darkmode_button").checked = false;
+        }
+
+        dom.querySelector("#darkmode_button").onclick = (x) => {
+          // if (dom.classList.contains('dark')) {
+          if (dom.querySelector("#darkmode_button").checked == false) {
+            document.cookie = "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            dom.classList.remove('dark');
+          }
+          else {
+            dom.classList.add('dark');
+            document.cookie = "darkmode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+          }
+        }
+
+      }
+
+      let getScroll = function() {
+        if (window.pageYOffset != undefined) {
+            return [pageXOffset, pageYOffset];
+        } else {
+            var sx, sy, d = document,
+                r = d.documentElement,
+                b = d.body;
+            sx = r.scrollLeft || b.scrollLeft || 0;
+            sy = r.scrollTop || b.scrollTop || 0;
+            return [sx, sy];
+        }
+      }
+
+      let gotoURL = (url, recordHistory, scrollTo) => {
+        fetch(url).then((response) => {
+          response.text().then((text) => {
+            let parser = new DOMParser();
+            let htmlDoc = parser.parseFromString(text, 'text/html');
+            document.body = htmlDoc.body;
+            attachClickHandler(document.body);
+            if (recordHistory) {
+              window.history.pushState({prevURL: window.location.pathname, scrollState: getScroll()}, htmlDoc.title, response.url);
+            }
+            if (scrollMapper[location.href]) {
+              window.scrollTo(scrollMapper[location.href][0], scrollMapper[location.href][1]);
+            }
+            else {
+              window.scrollTo(0, 0);
+            }
+          })
+        });
+      }
+
+      window.addEventListener('beforeunload', (event) => {
+        console.log("UNLOADING: ", window.location.href);
+      })
+
+      window.addEventListener('popstate', (event) => {
+        gotoURL(event.target.location.href, false, event.state ? event.state.scrollState : null);
+      });
+
+      attachClickHandler(document.body);
     </script>
   </body>
 </html>

@@ -1,15 +1,27 @@
 .post-title {
   margin-top: 0;
   margin-bottom: 4rem;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .sans-serif {
   font-family: 'IBM Plex Sans',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 }
 
+// disable animation on load
+.preload * {
+ -webkit-transition: none !important;
+ -moz-transition: none !important;
+ -ms-transition: none !important;
+ -o-transition: none !important;
+}
+
 html {
 	font-size: 16px;
+}
+
+body {
+	transition: background-color 0.4s;
 }
 
 article
@@ -110,4 +122,189 @@ figure {
 .footnotes {
 	border-top: 1px solid #CCC;
 	margin-top: 5rem;
+}
+
+.dark {
+	background: #111;
+	color: hsla(0, 0%, 100%, 0.9);
+	a {
+		color:  #FFD700;
+	}
+
+	figcaption {
+		color: #CCC;
+	}
+	.post-content .highlighter-rouge {
+		color: #CCC;
+		background: #333;
+		.highlight {
+			background: #333;
+		}
+		div.highlight .lineno {
+			color: #888;
+		}
+	}
+}
+
+
+$black:#1E1E1E;
+$grey: #CCCCCC;
+$white: #FAFAFA;
+
+.switch-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: left;
+	height: 0;
+	// height: 100vh;
+}
+
+span.switcher {
+  position: relative;
+
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 10px 0;
+  font-size: 10px;
+  font-weight: 700;
+
+  input {
+  	 -webkit-appearance: none;
+  	 -moz-appearance: none;
+     appearance: none;
+     position: relative;
+     width: 130px;
+     height: 40px;
+     border-radius: 20px;
+     background-color: $black;
+     outline: none;
+
+     &:before, &:after {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $white;
+     }
+     &:before {
+     	font-weight: 700;
+        content: 'LIGHT';
+        left: 20px;
+     }
+     &:after {
+     	font-weight: 700;
+        content: 'DARK';
+        right: 20px;
+     }
+  }
+  label {
+     z-index: 1;
+     position: absolute;
+     top: 10px;
+     bottom: 10px;
+     border-radius: 20px;
+     pointer-events: none;
+  }
+
+  &.switcher-1 {
+     input {
+        transition:.25s -.1s;
+        &:not(:checked)
+        {
+           background-color:$white;
+           &:before {
+              color:$white;
+              transition: color .5s .2s;
+           }
+           &:after {
+              color:$grey;
+              transition: color .5s;
+           }
+           & + label {
+              left: 10px;
+              right: 60px;
+              background: $black;
+
+              transition: left .5s, right .4s .2s;
+           }
+        }
+
+        &:checked
+        {
+           background:$black;
+           transition: background .5s -.1s;
+
+           &:before {
+              color:$grey;
+              transition: color .5s;
+           }
+
+           &:after {
+              color:$black;
+              transition: color .5s .2s;
+           }
+
+           & + label {
+              left: 60px;
+              right: 10px;
+              background:$white;
+              transition: left .4s .2s, right .5s, background .35s -.1s;
+           }
+        }
+     }
+  }
+  &.switcher-2 {
+     overflow:hidden;
+     input {
+
+        transition:background-color 0s .5s;
+        &:before {
+           color:$black;
+        }
+        &:after {
+           color:$white;
+        }
+        &:checked {
+           background-color:$white;
+           &+label {
+              background:$white;
+
+              animation: turn-on .5s ease-out;
+
+              @keyframes turn-on {
+                 0% {
+                    left:100%;
+                 }
+                 100% {
+                    left:0%;
+                 }
+              }
+           }
+        }
+        &:not(:checked) {
+           background:$black;
+           &+label {
+              background:$black;
+
+              animation: turn-off .5s ease-out;
+
+              @keyframes turn-off {
+                 0% {
+                    right:100%;
+                 }
+                 100% {
+                    right:0%;
+                 }
+              }
+           }
+        }
+     }
+     label {
+        width:200px;
+        height:50px;
+        border-radius:25px;
+     }
+  }
 }
