@@ -116,10 +116,8 @@
                 '</a>';
         }
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.4/lib/darkmode-js.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
     <script>
-      // new Darkmode().showWidget();
       mediumZoom('.post-content img')
     </script>
 
@@ -147,12 +145,10 @@
         }
 
         if (document.cookie.replace(/(?:(?:^|.*;\s*)darkmode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "true") {
-          console.log("restoring dark mode")
-          dom.classList.add('dark');
+          document.documentElement.classList.add('dark');
           dom.querySelector("#darkmode_button").checked = true;
         }
         else {
-          console.log("setting chckbox to false");
           dom.querySelector("#darkmode_button").checked = false;
         }
 
@@ -160,10 +156,10 @@
           // if (dom.classList.contains('dark')) {
           if (dom.querySelector("#darkmode_button").checked == false) {
             document.cookie = "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            dom.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
           }
           else {
-            dom.classList.add('dark');
+            document.documentElement.classList.add('dark');
             document.cookie = "darkmode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
           }
         }

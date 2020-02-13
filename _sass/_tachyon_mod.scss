@@ -18,10 +18,9 @@
 
 html {
 	font-size: 16px;
-}
-
-body {
-	transition: background-color 0.4s;
+  background: #FFF;
+  color: #000;
+  transition: background-color 0.4s;
 }
 
 article
@@ -124,7 +123,7 @@ figure {
 	margin-top: 5rem;
 }
 
-.dark {
+html.dark {
 	background: #111;
 	color: hsla(0, 0%, 100%, 0.9);
 	a {
