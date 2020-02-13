@@ -189,6 +189,16 @@
             let parser = new DOMParser();
             let htmlDoc = parser.parseFromString(text, 'text/html');
             document.body = htmlDoc.body;
+
+            if (!!window.webkitURL) {
+              document.querySelectorAll('video').forEach((el) => {
+                  el.load();
+              });
+              document.querySelectorAll('audio').forEach((el) => {
+                  el.load();
+              });
+            }
+
             attachClickHandler(document.body);
             if (recordHistory) {
               window.history.pushState({prevURL: window.location.pathname, scrollState: getScroll()}, htmlDoc.title, response.url);
