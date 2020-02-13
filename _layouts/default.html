@@ -106,22 +106,20 @@
 
     </div>
     <!-- Add a script to make headers click + linkable! -->
-    <script>
-        var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
-
-        for (var i = 0; i < headings.length; i++) {
-            headings[i].innerHTML =
-                '<a href="#' + headings[i].id + '">' +
-                    headings[i].innerText +
-                '</a>';
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
     <script>
       mediumZoom('.post-content img')
     </script>
 
     <script type="text/javascript">
+      var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+      for (var i = 0; i < headings.length; i++) {
+          headings[i].innerHTML =
+              '<a href="#' + headings[i].id + '">' +
+                  headings[i].innerText +
+              '</a>';
+      }
 
       if (history.scrollRestoration) {
         window.history.scrollRestoration = 'auto';
@@ -186,14 +184,14 @@
             let htmlDoc = parser.parseFromString(text, 'text/html');
             document.body = htmlDoc.body;
 
-            if (!!window.webkitURL) {
+            // if (!!window.webkitURL) {
               document.querySelectorAll('video').forEach((el) => {
                   el.load();
               });
               document.querySelectorAll('audio').forEach((el) => {
                   el.load();
               });
-            }
+            // }
 
             attachClickHandler(document.body);
             if (recordHistory) {
