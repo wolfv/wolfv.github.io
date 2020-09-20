@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gemspec
+# gemspec
 
 # for demo site
+gem "jekyll"
 gem "jekyll-paginate"
